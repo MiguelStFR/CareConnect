@@ -11,11 +11,13 @@ class MarkerModel{
   int userId;
   int numIndividuos = 0;
   String descricao = '';
-  late String markerType = MarkerTypeEnum.nd.toString();
+  late String markerType = MarkerTypeList.first;
   late List<String> tiposNecessidadeList = [];
   late List<String> generosList = [];
   late List<String> faixaEtariaList = [];
   late String Contatos = '';
+  DateTime createdOn = DateTime.now();
+  DateTime lastAlteration = DateTime.now();
 
   MarkerModel({required this.id, required this.marker, required this.userId}){}
 

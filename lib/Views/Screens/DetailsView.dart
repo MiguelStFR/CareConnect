@@ -39,7 +39,7 @@ class _detailsScreen extends State<DetailsScreen>{
           child: Column(children: [
             Container(
               alignment: Alignment.center,
-              child: Text(
+              child: const Text(
                 'DETALHES DO MARCADOR',
                 style: TextStyle(
                   fontSize: 25,
@@ -62,7 +62,7 @@ class _detailsScreen extends State<DetailsScreen>{
                     alignment: Alignment.center,
                     padding:const EdgeInsets.all(5),
                     child:TextFormField(
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                           label: Text('Quantidade:')
                       ),
                       controller: widget.detailsController.numIndividuosController,
@@ -83,7 +83,7 @@ class _detailsScreen extends State<DetailsScreen>{
                       ),
                       onChanged: (String? value) {
                         setState(() {
-                          widget.detailsController.marker.markerType = widget.detailsController.selectedMarkerType = value!;
+                          widget.detailsController.marker.markerType = value!;
                         });
                       },
                       items: MarkerTypeList.map<DropdownMenuItem<String>>((String value) {
@@ -92,7 +92,7 @@ class _detailsScreen extends State<DetailsScreen>{
                           child: Text(value),
                         );
                       }).toList(),
-                      value: widget.detailsController.selectedMarkerType,
+                      value: widget.detailsController.marker.markerType,
                     ),
                   ),
                 ],
